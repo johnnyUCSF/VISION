@@ -499,7 +499,8 @@ setMethod("analyze", signature(object="Vision"),
 
     # Populates @latentSpace
     if (all(dim(object@latentSpace) == c(1, 1))) {
-        object <- filterData(object)
+        ####object <- filterData(object) JY removed 06/09/19 because of importing from scanpy; already filtered genes.
+                ###built in filters became too stringent and latent space too small.
         object <- computeLatentSpace(object)
     }
 
