@@ -74,7 +74,7 @@ filterGenesThreshold <- function(data, threshold) {
 #' @param num_mad number of median absolute deviations
 #' @param plot whether or not to generate a diagnostic plot
 #' @return character vector of gene names passing filter
-filterGenesFano <- function(data, num_mad=0.5, plot=FALSE) {
+filterGenesFano <- function(data, num_mad=0.01, plot=FALSE) {
 
     if(plot){
         if(!requireNamespace("ggplot2", quietly = TRUE)){
