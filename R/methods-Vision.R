@@ -506,7 +506,7 @@ setMethod("analyze", signature(object="Vision"),
 
     # Populates @latentSpace
     if (all(dim(object@latentSpace) == c(1, 1))) {
-        object <- filterData(object)
+        #####object <- filterData(object) removed due to overelimination after scanpy import JY 06/09/19
         object <- computeLatentSpace(object)
     }
 
